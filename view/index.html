@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--基础包-->
+    <script src="../packages/sdk/dist/dc.base.min.js"></script>
+    <!--核心包-->
+    <script src="../packages/sdk/dist/dc.core.min.js"></script>
+    <!--chart包-->
+    <script src="../packages/sdk/dist/dc.chart.min.js"></script>
+    <!--mapv包-->
+    <script src="../packages/sdk/dist/dc.mapv.min.js"></script>
+    <!--主要样式-->
+    <link
+      href="../packages/sdk/dist/dc.core.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>测试</title>
+  </head>
+  <body>
+    <div class="viewer-container" id="viewer-container"></div>
+  </body>
+
+  <script>
+    import DC from '../packages/sdk/dist/dc.base.min.js'
+    import DcCore from '../packages/sdk/dist/dc.core.min.js'
+    import DcMapv from '../packages/sdk/dist/dc.mapv.min.js'
+    import DcChart from '../packages/sdk/dist/dc.chart.min.js'
+    // require('../packages/sdk/dist/dc.base.min.js')
+    // require('../packages/sdk/dist/dc.chart.min.js')
+    // require('../packages/sdk/dist/dc.mapv.min.js')
+
+    global.DC = DC //将DC提升到全局变量，方便在工程中直接使用
+    DC.use(DcCore) //安装DC核心库
+    DC.use(DcChart) //安装DC图标库，使用前确保echarts为全局函数
+    DC.use(DcMapv) //安装Mapv库
+    DC.ready(() => {
+      let viewer = new DC.Viewer('viewer-container')
+    })
+  </script>
+</html>

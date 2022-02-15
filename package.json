@@ -63,7 +63,7 @@
     "file-loader": "^3.0.1",
     "fs-extra": "^9.1.0",
     "mini-css-extract-plugin": "^0.6.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prettier": "^1.16.4",
     "rimraf": "^2.6.3",
@@ -76,5 +76,8 @@
     "webpack-cli": "^3.3.0",
     "webpack-glsl-loader": "^1.0.1",
     "webpack-obfuscator": "^1.8.0"
+  },
+  "dependencies": {
+    "@dvgis/dc-sdk": "^2.9.0"
   }
 }
